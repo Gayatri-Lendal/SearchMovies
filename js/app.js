@@ -72,6 +72,17 @@ document.querySelector("#search").addEventListener(
 )
 
 
+//adding loader 
+window.addEventListener('load',() => {
+    const loader = document.querySelector(".loader");
+
+    loader.classList.add("loader--hidden");  
+
+    loader.addEventListener('transitionend',() => {
+    document.body.removeChild(document.querySelector(".loader"));
+ });
+});
+
 
 // in the website we are going to show image,title,rating and overview of the movie.
 
