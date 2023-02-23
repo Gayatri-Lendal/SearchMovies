@@ -41,17 +41,17 @@ const showMovies = (data) => {
             box.classList.add("box")
             box.innerHTML = `
                 <img src="${imagePath}" alt="" />
-
                 <div class="overlay">
-                    <div class="title"> 
-                        <h2> ${result.original_title}  </h2>
-                        <span> ${result.vote_average} <span>
-                    </div>
-                    <h3>Overview:</h3>
-                    <p> 
-                        ${result.overview}
-                    </p>
-                 </div>
+                <div class="title"> 
+                    <h2> ${result.original_title}  </h2>
+                    <span> ${result.vote_average} <span>
+                </div>
+                <h3>Overview:</h3>
+                <p> 
+                    ${result.overview}
+                </p>
+             </div>
+               
             `
             moiveBox.appendChild(box)
         }
@@ -72,16 +72,8 @@ document.querySelector("#search").addEventListener(
 )
 
 
-//adding loader 
-window.addEventListener('load',() => {
-    const loader = document.querySelector(".loader");
 
-    loader.classList.add("loader--hidden");  
-
-    loader.addEventListener('transitionend',() => {
-    document.body.removeChild(document.querySelector(".loader"));
- });
-});
+    
 
 
 // in the website we are going to show image,title,rating and overview of the movie.
@@ -109,3 +101,4 @@ The await keyword makes the function pause the execution and wait for a resolved
 /*event-addEventListener >The querySelector() method returns the first element that matches a CSS selector.
                          >To return all matches (not only the first), use the querySelectorAll() instead.*/
 //addEventListener >The addEventListener() method attaches an event handler to an element
+
